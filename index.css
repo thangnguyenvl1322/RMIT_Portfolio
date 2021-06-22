@@ -29,6 +29,7 @@ html {
     width: 100%;
     scroll-behavior: smooth;
 
+
     font-size: 10px;
     color: var(--primary-gray);
 }
@@ -105,14 +106,7 @@ body {
 /* _________________________________________________________________ */
 /* Animations */
 
-.slide-fade-in {
-    opacity: 0;
-    transition: opacity 250ms ease-in;
-}
 
-.slide-fade-in.appear {
-    opacity: 1;
-}
 
 /* _________________________________________________________________ */
 /* All Section */
@@ -351,6 +345,8 @@ nav {
     font-weight: 500;
     font-size: 10rem;
     line-height: 12rem;
+
+    transition: all 250ms;
 }
 
 #EA_title_dashline {
@@ -359,6 +355,9 @@ nav {
 
     background-color: white;
     margin: 2.5rem 0;
+
+    transform-origin:bottom left;
+    transition: all 250ms;
 }
 
 #all_grades_details {
@@ -373,15 +372,21 @@ nav {
 .EA_categories {
     display: flex;
 
+    overflow: hidden;
+
+    transform: translateX(25%);
+    opacity: 0;
+    transition: 1000ms ease-in;
+
     margin-bottom: 5rem;
 }
 
 .EA_category_title_section {
-    width: 50%;
+    width: 40%;
 }
 
 .EA_category_items_section {
-    width: 50%;
+    width: 60%;
 }
 
 .EA_category_items_inner_section {
