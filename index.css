@@ -393,7 +393,6 @@ nav {
     z-index: 1;
     width: 60%;
 
-    
     transition: all 1000ms ease-in-out;
 }
 
@@ -475,17 +474,15 @@ nav {
     position: absolute;
     right: 0;
 
-    width: 60%; 
+    width: 60%;
 
-    padding-top: 2rem;
-    padding-left: 3rem;
+    padding: 2rem 3rem 2rem 3rem;
 
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
 
     transform: translateX(-100%);
     transition: all 1000ms;
-    border: 2px solid red;
 }
     
 

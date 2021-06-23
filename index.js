@@ -103,16 +103,24 @@ EA_grade_level.forEach(object => {
 const view_EA_extra_info = (self, extra_info_id) => {
     self.parentNode.parentNode.parentNode.style.transform = 'translateX(-100%)';
 
+    const extra_info_section = document.getElementById(extra_info_id);
+    const extra_info_section_height = extra_info_section.getBoundingClientRect().bottom - extra_info_section.getBoundingClientRect().y;
+
+    const EA_category_middle_line = self.parentNode.parentNode.parentNode.parentNode.querySelector('.EA_category_middle_line');
+
+    //Scaling the middle line and changing the 
     setTimeout(function() {
-        const EA_category_middle_line = self.parentNode.parentNode.parentNode.parentNode.querySelector('.EA_category_middle_line');
         EA_category_middle_line.style.transform = 'scaleY(0)';
-    }, 500)
+    }, 700)
 
     setTimeout(function() {
-        self.parentNode.parentNode.parentNode.parentNode.style.height = '500px';
-        const extra_info_section = document.getElementById(extra_info_id);
+        self.parentNode.parentNode.parentNode.parentNode.style.height = `${extra_info_section_height}px`;
         extra_info_section.style.transform = 'translateX(0)';
-    }, 1500)
+    }, 2000)
+
+    setTimeout(function() {
+        EA_category_middle_line.style.transform = 'scaleY(1)';
+    }, 2700)
     
 
     
