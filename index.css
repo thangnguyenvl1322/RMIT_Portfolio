@@ -40,6 +40,22 @@ body {
     width: 100%;
 }
 
+/* _________________________________________________________________ */
+/* TOOLS */
+
+.TOOL_collapsing_div {
+    height: 5   00px;
+    width: 100%;
+
+    transform-origin: top;
+    transition: height 1000ms;
+    border: 2px solid red;
+
+    height: auto;
+    max-height: 100%;
+    z-index: 2;
+}
+
 
 /* _________________________________________________________________ */
 /* Structural Ultility */
@@ -388,7 +404,7 @@ nav {
     width: 40%;
     background-color: white;
 }
-/*----------------------------------------------------------------*/
+
 .EA_category_items_section {
     z-index: 1;
     width: 60%;
@@ -416,7 +432,7 @@ nav {
 .EA_category_title {
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
     align-items: flex-start;
 
     margin-top: 2rem;
@@ -483,6 +499,18 @@ nav {
 
     transform: translateX(-100%);
     transition: all 1000ms;
+}
+
+.EA_extra_content_header {
+    color: var(--primary-gold);
+    font-size: 2rem;
+}
+
+.EA_extra_content_subheader {
+    color:var(--primary-light-gray);
+    font-size: 1.5rem;
+
+    margin-bottom: 2.5rem;
 }
     
 
@@ -564,6 +592,21 @@ nav {
         height: calc(100% - 2rem);
         width: 0.3rem;
         background-color: var(--primary-gray);
+    }
+
+    .EA_category_item_extra_content {
+        position: absolute;
+        right: 6rem;
+    
+        width: 60%;
+    
+        padding: 2rem 3rem 2rem 3rem;
+    
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+    
+        transform: translateX(-100%);
+        transition: all 1000ms;
     }
 
     #all_grades_details {
