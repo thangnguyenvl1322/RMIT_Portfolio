@@ -107,6 +107,10 @@ body {
     color: var(--primary-gold);
 }
 
+.white_text {
+    color: white;
+}
+
 .text_align_right {
     text-align: right;
 }
@@ -524,6 +528,21 @@ nav {
     transition: all 1000ms;
 }
 
+.EA_extra_content_back_button {
+    height: 5rem;
+    width: 5rem;
+
+    border-radius: 50%;
+    background-color: var(--primary-gray);
+
+    transition: all 500ms;
+}
+
+.EA_extra_content_back_button:hover {
+    cursor: pointer;
+    background-color: var(--primary-gold);
+}
+
 .EA_extra_content_header {
     color: var(--primary-gold);
     font-size: 2rem;
@@ -625,7 +644,6 @@ nav {
     
         padding: 2rem 3rem 2rem 3rem;
 
-        border: 2px solid red;
     
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;

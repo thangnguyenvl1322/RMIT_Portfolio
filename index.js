@@ -101,15 +101,14 @@ EA_grade_level.forEach(object => {
 // BUTTONS :
 
 const view_EA_extra_info = (self, extra_info_id) => {
-    self.parentNode.parentNode.parentNode.style.transform = 'translateX(-100%)';
-
-
     const extra_info_section = document.getElementById(extra_info_id);
     const extra_info_EA_category = extra_info_section.parentNode;
 
     const extra_info_section_height = extra_info_section.getBoundingClientRect().bottom - extra_info_section.getBoundingClientRect().y;
 
     const EA_category_middle_line = self.parentNode.parentNode.parentNode.parentNode.querySelector('.EA_category_middle_line');
+
+    self.parentNode.parentNode.parentNode.style.transform = 'translateX(-100%)';
 
     //Scaling the middle line and changing the 
     setTimeout(function() {
@@ -119,7 +118,7 @@ const view_EA_extra_info = (self, extra_info_id) => {
     setTimeout(function() {
         extra_info_EA_category.style.height = `${extra_info_section_height}px`;
         extra_info_section.style.transform = 'translateX(0)';
-    }, 2000)
+    }, 1700)
 
     setTimeout(function() {
         EA_category_middle_line.style.transform = 'scaleY(1)';
@@ -127,4 +126,26 @@ const view_EA_extra_info = (self, extra_info_id) => {
     
 
     
+}
+
+const close_EA_extra_info = (self) => {
+    const EA_categories = self.parentNode.parentNode;
+    const EA_category_middle_line = self.parentNode.parentNode.querySelector('.EA_category_middle_line');
+    const extra_info_section = self.parentNode;
+    const EA_category_items_section = self.parentNode.parentNode.querySelector('.EA_category_items_section');
+    
+    extra_info_section.style.transform = 'translateX(-100%)';
+
+    setTimeout(function() {
+        EA_category_middle_line.style.transform = 'scaleY(0)';
+    }, 700)
+
+    setTimeout(function() {
+        EA_categories.style.height = 'auto';
+        EA_category_items_section.style.transform = 'translateX(0)';
+    }, 1700)
+
+    setTimeout(function() {
+        EA_category_middle_line.style.transform = 'scaleY(1)';
+    }, 2700)
 }
