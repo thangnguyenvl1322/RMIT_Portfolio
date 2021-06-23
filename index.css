@@ -346,7 +346,7 @@ nav {
     font-size: 10rem;
     line-height: 12rem;
 
-    transition: all 250ms;
+    transition: all 500ms;
 }
 
 #EA_title_dashline {
@@ -357,7 +357,7 @@ nav {
     margin: 2.5rem 0;
 
     transform-origin:bottom left;
-    transition: all 250ms;
+    transition: all 500ms;
 }
 
 #all_grades_details {
@@ -367,10 +367,12 @@ nav {
 
 .grade_level_detail {
     margin-bottom: 20rem;
+    overflow: hidden;
 }
 
 .EA_categories {
     display: flex;
+    position: relative;
 
     overflow: hidden;
 
@@ -382,16 +384,34 @@ nav {
 }
 
 .EA_category_title_section {
+    z-index: 2;
     width: 40%;
+    background-color: white;
+}
+/*----------------------------------------------------------------*/
+.EA_category_items_section {
+    z-index: 1;
+    width: 60%;
+
+    
+    transition: all 1000ms ease-in-out;
 }
 
-.EA_category_items_section {
-    width: 60%;
+.EA_category_middle_line {
+    position: absolute;
+    top: 2rem;
+    left: 40%;
+    height: calc(100% - 2rem);
+    width: 0.3rem;
+    background-color: var(--primary-gray);
+
+    transition: all 1000ms ease-in-out;
+    transform-origin: top;
+    z-index: 2;
 }
 
 .EA_category_items_inner_section {
     padding-left: 2rem;
-    border-left: 0.3rem solid var(--primary-gray);
 }
 
 .EA_category_title {
@@ -417,25 +437,28 @@ nav {
     font-size: 1.5rem;
 }
 
+
 .EA_category_items {
-    position: relative;
     display: flex;
-    align-items: flex-start;
+    font-size: 1.5rem;
+
+    transition: all 250ms ease-in-out;
+}
+
+.EA_category_items:hover {
+    cursor: pointer;
+    transform: translateX(5px);
 }
 
 .EA_category_items > * {
-    display: flex;
-    align-items: flex-end;
-
     color: var(--primary-gray);
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    
     padding: 0 0 0 1rem;
 }
 
 .EA_icon {
-    position: relative;
-    top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .EA_category_number {
@@ -448,6 +471,22 @@ nav {
     margin-right: 2rem;
 }
 
+.EA_category_item_extra_content {
+    position: absolute;
+    right: 0;
+
+    width: 60%; 
+
+    padding-top: 2rem;
+    padding-left: 3rem;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+
+    transform: translateX(-100%);
+    transition: all 1000ms;
+    border: 2px solid red;
+}
     
 
 
@@ -519,6 +558,15 @@ nav {
     .EA_category_items_section {
         width: 70%;
         padding-right: 10px;
+    }
+
+    .EA_category_middle_line {
+        position: absolute;
+        top: 2rem;
+        left: 30%;
+        height: calc(100% - 2rem);
+        width: 0.3rem;
+        background-color: var(--primary-gray);
     }
 
     #all_grades_details {

@@ -3,7 +3,7 @@ const EA_grade_level = document.querySelectorAll('.grade_level_detail');
 
 
 //__________________________________________________________________
-// OPTIONS:
+// OPTIONS :
 const EA_categories_options = {
     root: null,
     threshold: 0.65,
@@ -15,8 +15,8 @@ const EA_main_title_option = {
 }
 
 //__________________________________________________________________
-// OBSERVER:
-const showing_EA_categories = new IntersectionObserver(function(entries, showing_EA_categories) {
+// OBSERVER :
+const slide_fade_in_left = new IntersectionObserver(function(entries, slide_fade_in_left) {
     
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
@@ -26,7 +26,7 @@ const showing_EA_categories = new IntersectionObserver(function(entries, showing
             console.log('is intersecting');
             entry.target.style.opacity = 1;
             entry.target.style.transform = 'translateX(0)';
-            showing_EA_categories.unobserve(entry.target);
+            slide_fade_in_left.unobserve(entry.target);
         }
     })
 }, EA_categories_options)
@@ -59,27 +59,61 @@ const change_EA_main_title = new IntersectionObserver(function(entries, change_E
                 'gap_year_details': 'GAP YEAR',
             }
 
+            setTimeout(function() {
+                EA_title_dashline.style.transform = `scaleX(${EA_header_dashline_multiplier})`;
+            },0)
 
-            // Scaling the EA Dashline:
-            EA_title_dashline.style.transform = `scaleX(${EA_header_dashline_multiplier})`;
+            setTimeout(function() {
+                EA_main_heading.style.opacity = 0;
+                EA_main_heading.style.transform = `translateY(${EA_main_heading_height}px)`;
+            },250)
 
-            //Translating the h2 downward:
-            EA_main_heading.style.transform = `translateY(${EA_main_heading_height}px)`;
+            setTimeout(function() {
+                EA_main_heading.innerHTML = EA_years[entry.target.id];
+            },750)
 
-            EA_main_heading.innerHTML = EA_years[entry.target.id];
+            setTimeout(function() {
+                EA_main_heading.style.opacity = 1;
+                EA_main_heading.style.transform = `translateY(0px)`;
+                
+            },1000)
+
+            setTimeout(function() {
+                EA_title_dashline.style.transform = `scaleX(1)`;
+            },1250)
 
         }
     })
 }, EA_main_title_option)
 
 //__________________________________________________________________
-// SETTING A TARGET
+// SETTING A TARGET :
 
 EA_categories.forEach(object => {
-    showing_EA_categories.observe(object);
+    slide_fade_in_left.observe(object);
 })
 
-// EA_grade_level.forEach(object => {
-//     change_EA_main_title.observe(object);
-// })
+EA_grade_level.forEach(object => {
+    change_EA_main_title.observe(object);
+})
 
+//__________________________________________________________________
+// BUTTONS :
+
+const view_EA_extra_info = (self, extra_info_id) => {
+    self.parentNode.parentNode.parentNode.style.transform = 'translateX(-100%)';
+
+    setTimeout(function() {
+        const EA_category_middle_line = self.parentNode.parentNode.parentNode.parentNode.querySelector('.EA_category_middle_line');
+        EA_category_middle_line.style.transform = 'scaleY(0)';
+    }, 500)
+
+    setTimeout(function() {
+        self.parentNode.parentNode.parentNode.parentNode.style.height = '500px';
+        const extra_info_section = document.getElementById(extra_info_id);
+        extra_info_section.style.transform = 'translateX(0)';
+    }, 1500)
+    
+
+    
+}
