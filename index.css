@@ -43,18 +43,7 @@ body {
 /* _________________________________________________________________ */
 /* TOOLS */
 
-.TOOL_collapsing_div {
-    height: 5   00px;
-    width: 100%;
 
-    transform-origin: top;
-    transition: height 1000ms;
-    border: 2px solid red;
-
-    height: auto;
-    max-height: 100%;
-    z-index: 2;
-}
 
 
 /* _________________________________________________________________ */
