@@ -346,15 +346,30 @@ nav {
     height: 100vh;
 }
 
-#EA_background {
-    position: relative;
+.EA_title_section_background {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 
-    background-image: url(ultility-photos/3.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#EA_background_1 {
+    background-image: url(ultility-photos/3.jpg);
+    transform: translateX(100%);
+}
+
+#EA_background_2 {
+    background-image: url(ultility-photos/2.jpg);
+    transform: translateX(100%);
+}
+
+#EA_background_3 {
+    background-image: url(ultility-photos/4.jpg);
 }
 
 #EA_title_container {
@@ -390,6 +405,10 @@ nav {
 #all_grades_details {
     width: 50%;
     padding-top: 5rem;
+
+    background-color: white;
+
+    z-index: 1;
 }
 
 .grade_level_detail {
