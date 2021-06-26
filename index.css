@@ -646,10 +646,7 @@ nav {
     }
 
     #EA_title_section {
-        position: relative;
-        height: 250px;
-
-        width: 100%;
+        display: none;
     }
 
     .EA_category_title_section {
