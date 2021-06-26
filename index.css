@@ -40,6 +40,19 @@ body {
     width: 100%;
 }
 
+a {
+    color:var(--primary-gray);
+    transition: all 500ms;
+}
+
+a:hover {
+    color: var(--primary-gold);
+}
+
+img {
+    height: 30rem;
+}
+
 /* _________________________________________________________________ */
 /* TOOLS */
 
@@ -321,6 +334,11 @@ nav {
     z-index: 8;
 }
 
+#section_3 img {
+    margin: 2.5rem 0;
+    border-radius: 2rem;
+}
+
 #EA_title_section {
     position: sticky;
     top: 0;
@@ -543,7 +561,27 @@ nav {
 
     margin-bottom: 2.5rem;
 }
-    
+
+.EA_photo_caption > * {
+    display: inline-block
+}
+
+.EA_view_full_image {
+    transition: all 250ms ease-in-out;
+}
+
+.EA_view_full_image:hover {
+    transform: translateX(5px);
+    color: var(--primary-gold);
+}
+
+.EA_photo_caption > *{
+    margin-right: 1rem;
+}
+
+#grade_11_ISHMUN img {
+    height: 50rem;
+}
 
 
 /* _________________________________________________________________ */
@@ -592,6 +630,8 @@ nav {
         width: 100%;
     }
 
+    /* Section 3 ---------------------------------------*/
+
     #section_3 {
         display: block;
     
@@ -599,10 +639,15 @@ nav {
         z-index: 8;
     }
 
+    #section_3 img {
+        height: 20rem;
+        margin: 2.5rem 0;
+        border-radius: 2rem;
+    }
+
     #EA_title_section {
         position: relative;
         height: 250px;
-
 
         width: 100%;
     }
