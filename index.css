@@ -214,9 +214,6 @@ img {
     Font-Size: 1.5rem;
 }
 
-
-
-
 /* _________________________________________________________________ */
 /* Header */
 
@@ -359,17 +356,22 @@ nav {
 }
 
 #EA_background_1 {
-    background-image: url(ultility-photos/3.jpg);
+    background-image: url(ultility-photos/2.jpg);
     transform: translateX(100%);
 }
 
 #EA_background_2 {
-    background-image: url(ultility-photos/2.jpg);
+    background-image: url(ultility-photos/3.jpg);
     transform: translateX(100%);
 }
 
 #EA_background_3 {
     background-image: url(ultility-photos/4.jpg);
+    transform: translateX(100%);
+}
+
+#EA_background_4 {
+    background-image: url(ultility-photos/5.jpg);
 }
 
 #EA_title_container {
@@ -537,7 +539,6 @@ nav {
 
     margin-right: 2rem;
 }
-
 
 .EA_category_item_extra_content {
     position: absolute;
