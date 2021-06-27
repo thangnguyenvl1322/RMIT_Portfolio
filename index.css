@@ -181,7 +181,7 @@ h3 {
     display: grid;
     grid-template: 1fr / 17% 1fr 17%;
     grid-template-areas: 
-        "left_side mid righside"
+        "left_side mid_side righside"
     ;
 }
 
@@ -191,7 +191,7 @@ h3 {
 }
 
 .mid_column {
-    grid-area: mid;
+    grid-area: mid_side;
 }
 
 .right_column {
