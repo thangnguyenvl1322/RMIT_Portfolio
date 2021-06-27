@@ -1,5 +1,5 @@
-const EA_categories = document.querySelectorAll('.EA_categories');
-const EA_grade_level = document.querySelectorAll('.grade_level_detail');
+const EA_categories_list = document.querySelectorAll('.EA_categories');
+const EA_grade_level_list = document.querySelectorAll('.grade_level_detail');
 
 
 //__________________________________________________________________
@@ -20,7 +20,6 @@ const slide_fade_in_left = new IntersectionObserver(function(entries, slide_fade
     
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
-            console.log('not intersecting');
             return;
         } else {
             console.log('is intersecting');
@@ -56,7 +55,7 @@ const change_EA_main_title = new IntersectionObserver(function(entries, change_E
                 'grade_10_details': 'SOPHOMORE',
                 'grade_11_details': 'JUNIOR',
                 'grade_12_details': 'SENIOR',
-                'gap_year_details': 'GAP YEAR',
+                'gap_year_details': 'GAP-YEAR',
             }
 
             setTimeout(function() {
@@ -64,6 +63,18 @@ const change_EA_main_title = new IntersectionObserver(function(entries, change_E
             },0)
 
             setTimeout(function() {
+                const list_of_EA_title_section_background = document.querySelectorAll('.EA_title_section_background');
+
+                list_of_EA_title_section_background.forEach(element => {
+                    if (element.id.includes(EA_years[entry.target.id])) {
+                        element.style.transform = 'translate(0)';
+                    } else {
+                        setTimeout(function() {
+                            element.style.transform = 'translate(100%)';
+                        }, 500)
+                    }
+                })
+
                 EA_main_heading.style.opacity = 0;
                 EA_main_heading.style.transform = `translateY(${EA_main_heading_height}px)`;
             },250)
@@ -89,11 +100,11 @@ const change_EA_main_title = new IntersectionObserver(function(entries, change_E
 //__________________________________________________________________
 // SETTING A TARGET :
 
-EA_categories.forEach(object => {
+EA_categories_list.forEach(object => {
     slide_fade_in_left.observe(object);
 })
 
-EA_grade_level.forEach(object => {
+EA_grade_level_list.forEach(object => {
     change_EA_main_title.observe(object);
 })
 
