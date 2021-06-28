@@ -335,7 +335,7 @@ nav {
 
 #section_2 p {
     Font-Family: 'Poppins', Sans-Serif;
-    padding: 0 15rem;
+    padding: 0 35rem;
     Font-Size: 1.6rem;
     text-align: justify;
 }
@@ -477,9 +477,8 @@ nav {
 
 
 .grade_level_detail {
-    margin: 15rem 0;
+    margin-bottom: 15rem;
     overflow: hidden;
-    border: 2px solid red;
 }
 
 
@@ -816,14 +815,11 @@ nav {
         width: 100%;
     
         background-color: white;
-    
         z-index: 10;
     }
 
     .grade_level_detail {
         width: 100%;
         overflow: hidden;
-        border: 2px solid red;
-    
     }
 }

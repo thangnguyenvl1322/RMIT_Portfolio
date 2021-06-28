@@ -11,7 +11,7 @@ const EA_categories_options = {
 
 const EA_main_title_option = {
     root: null,
-    threshold: 0.75,
+    threshold: 0.8,
 }
 
 //__________________________________________________________________
