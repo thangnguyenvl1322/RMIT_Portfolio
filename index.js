@@ -6,7 +6,7 @@ const EA_grade_level_list = document.querySelectorAll('.grade_level_detail');
 // OPTIONS :
 const EA_categories_options = {
     root: null,
-    threshold: 0.65,
+    threshold: 0.50,
 }
 
 const EA_main_title_option = {
@@ -51,6 +51,7 @@ const change_EA_main_title = new IntersectionObserver(function(entries, change_E
 
             
             const EA_years = {
+                'all_grade_details_introduction': 'HIGHSCHOOL',
                 'grade_9_details': 'FRESHMEN',
                 'grade_10_details': 'SOPHOMORE',
                 'grade_11_details': 'JUNIOR',

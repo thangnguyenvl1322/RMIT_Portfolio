@@ -140,9 +140,7 @@ img {
 
 .SECTION {
     position: relative;
-
     width: 100%;
-
     box-shadow: 0 0 2.5rem 0.5rem black;
 }
 
@@ -220,13 +218,14 @@ nav {
     width: 100%;
 }
 
-#header_center_circle {
-    height: 25rem;
-    width: 25rem;
+#MAIN_landing_text {
+    Font-Family: 'Poppins', Sans-Serif;
+    font-weight: 500;
+    line-height: 10rem;
+    Font-Size: 20rem;
+    color: white;
 
-    border-radius: 50%;
-    border: 0.3rem solid white;
-    box-shadow: 0 0 3rem 0.5rem white;
+    margin: 2.5rem 0;
 }
 
 #header_logo {
@@ -299,6 +298,7 @@ nav {
 
 #profile_image_container {
     width: 100%;
+    margin: 10rem 0;
 }
 
 #profile_image {
@@ -336,7 +336,7 @@ nav {
 #section_2 p {
     Font-Family: 'Poppins', Sans-Serif;
     padding: 0 15rem;
-    Font-Size: 2rem;
+    Font-Size: 1.6rem;
     text-align: justify;
 }
 
@@ -347,7 +347,8 @@ nav {
     Font-Size: 10rem;
     color: var(--primary-gray);
 
-    margin: 2.5rem 0;
+
+    margin: 5rem 0;
 }
 
 #section_2 h3 {
@@ -395,7 +396,9 @@ nav {
     transition: all 500ms;
 }
 
-#EA_background_START {
+
+
+#EA_background_HIGHSCHOOL {
     background-image: url(ultility-photos/6.jpg);
     z-index: 1;
 }
@@ -461,19 +464,24 @@ nav {
     transition: all 500ms;
 }
 
+#all_grade_details_introduction {
+    height: 100rem;
+}
+
 #all_grades_details {
     width: 50%;
-    padding-top: 5rem;
 
     background-color: white;
-
     z-index: 10;
 }
 
+
 .grade_level_detail {
-    margin-bottom: 20rem;
+    margin: 15rem 0;
     overflow: hidden;
+    border: 2px solid red;
 }
+
 
 .EA_categories {
     display: flex;
@@ -800,12 +808,22 @@ nav {
         transition: all 1000ms;
     }
 
-    #all_grades_details {
-        width: 100%;
-        padding-top: 5rem;
-    }
-
     #EA_title_container h2 {
         font-size: 7.5rem;
+    }
+
+    #all_grades_details {
+        width: 100%;
+    
+        background-color: white;
+    
+        z-index: 10;
+    }
+
+    .grade_level_detail {
+        width: 100%;
+        overflow: hidden;
+        border: 2px solid red;
+    
     }
 }
