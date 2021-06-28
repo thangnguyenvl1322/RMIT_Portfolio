@@ -335,7 +335,7 @@ nav {
 
 #section_2 p {
     Font-Family: 'Poppins', Sans-Serif;
-    padding: 0 35rem;
+    padding: 0 20%;
     Font-Size: 1.6rem;
     text-align: justify;
 }
@@ -346,7 +346,6 @@ nav {
     line-height: 10rem;
     Font-Size: 10rem;
     color: var(--primary-gray);
-
 
     margin: 5rem 0;
 }
@@ -701,6 +700,9 @@ nav {
     
         margin: 2.5rem 0;
     }
+
+    /* Section 2 ---------------------------------------*/
+
 }
 
 
