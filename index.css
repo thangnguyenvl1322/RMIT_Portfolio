@@ -388,6 +388,11 @@ nav {
     top: 0;
     width: 50%;
     height: 100vh;
+
+    background-image: url(ultility-photos/2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .EA_title_section_background {
